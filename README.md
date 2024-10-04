@@ -8,7 +8,7 @@ It uses the [Remote desktop portal](https://flatpak.github.io/xdg-desktop-portal
 
 - A notification is shown every time the tool is used (at least with xdg-desktop-portal-kde)
   Workaround: Disable popups for KDE Portal Integration in Notification settings
-- Persistence does not work across reboots on KDE (https://bugs.kde.org/show_bug.cgi?id=480235)
+- ~Persistence does not work across reboots on KDE~ (fixed in Plasma 6.1): https://bugs.kde.org/show_bug.cgi?id=480235)
 
 ## Dependencies
 
