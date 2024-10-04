@@ -16,9 +16,7 @@ kconfig = dependency('KF6Config', method: 'cmake', modules: ['KF6::ConfigCore'])
 kwaylandclient = dependency('KWaylandClient')
 xkbcommon = dependency('xkbcommon')
 
-includes = include_directories('/usr/include/KWayland')
-
-qdbusxml2cpp = find_program('qdbusxml2cpp', dirs: '/usr/lib/qt6/bin')
+qdbusxml2cpp = find_program('qdbusxml2cpp', dirs: ['/usr/lib/qt6/bin'])
 remotedesktop_src = custom_target('remotedesktop',
                         input: ['dbus/org.freedesktop.portal.RemoteDesktop.xml'],
                         output: ['remotedesktop.h', 'remotedesktop.cpp'],
@@ -40,7 +38,6 @@ executable(
     src_files,
     remotedesktop_src[1],
     qtprocessed,
-    include_directories: includes,
     dependencies: [
         qt6_deps,
         kconfig,
